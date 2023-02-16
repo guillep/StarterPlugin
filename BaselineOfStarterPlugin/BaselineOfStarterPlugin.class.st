@@ -22,7 +22,8 @@ BaselineOfStarterPlugin >> onLoaded [
 	generator := [ 
 	             (PharoVMMaker
 		              on: CoInterpreter
-		              outputDirectory: Smalltalk image imageDirectory parent)
+		              outputDirectory:
+			              Smalltalk image imageDirectory parent / 'src')
 		             internal: #(  ) external: #( StarterPlugin );
 		             generateExternalPlugins ].
 
