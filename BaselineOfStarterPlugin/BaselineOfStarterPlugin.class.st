@@ -16,5 +16,15 @@ BaselineOfStarterPlugin >> baseline: spec [
 { #category : #baseline }
 BaselineOfStarterPlugin >> onLoaded [
 
-	"That's it. You're good."
+	"Generate the sources in the parent directory."
+
+	| generator |
+	generator := [ 
+	             (PharoVMMaker
+		              on: CoInterpreter
+		              outputDirectory: Smalltalk image imageDirectory parent)
+		             internal: #(  ) external: #( StarterPlugin );
+		             generateExternalPlugins ].
+
+	generator value
 ]

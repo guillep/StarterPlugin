@@ -47,7 +47,7 @@ StarterPlugin class >> requiresPlatformFiles [
 ]
 
 { #category : #'as yet unclassified' }
-StarterPlugin >> helloWorld [
+StarterPlugin >> primitiveVersion [
 
 	<export: true>
 	interpreterProxy pop: 1 thenPush: (self stringFromCString: 'v1.0.0')
