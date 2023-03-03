@@ -1,0 +1,3 @@
+[submodule "dependencies/PharoPluginBuilder"]
+	path = dependencies/PharoPluginBuilder
+	url = https://github.com/sebastianconcept/PharoPluginBuilder
